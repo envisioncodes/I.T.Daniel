@@ -1,0 +1,131 @@
+<!-- <div class="card bg-dark text-white font-weight-bolder mb-0">
+  <div class="card-body">
+    <h5 class="card-title">Managing Default Printer Using CMD</h5>
+    <p class="card-text">
+<p>From the command line, you can choose which printer to use for default printing. With the following command you can list all installed printers:</p>
+  <code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" –l</code>
+<p>Get the name of the default printer.</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" –g</code></p>
+<p>To set a different default printer, run the command:</p>
+
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -t –p "HP5525"</code></p>
+
+</div>
+</div> -->
+
+
+
+
+<div class="card bg-dark text-white font-weight-bolder mb-0">
+  <div class="card-body">
+    <h5 class="card-title">How to Create a TCP/IP Port for a Network Printer?</h5>
+    <p class="card-text">
+  <code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\Prnport.vbs" -a -r IP_192.168.1.22 -h 192.168.1.22 -o raw -n 9100</code>
+
+<p><br><strong>-r IP_192.168.1.22</strong> – a name of the network port;</p>
+<p><strong>-h 192.168.1.22</strong> – IP address of the device;</p>
+<p><strong>-o raw</strong> – a port type (raw or lpr);</p>
+<p><strong>-n 9100</strong> – the number of the TCP port of the device (usually 9100).</p>
+<p>
+
+And then you can install a new network printer on the system:</p>
+<code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -a -p "HP5525" -m "HP Universal Printing PCL 6" -r " IP_192.168.1.22"</code><br />
+<p>After the script is over, a new printer HP5525 appears in the system.</p>
+
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+     </div>
+
+</div>
+
+
+
+
+
+<div class="card bg-dark text-white font-weight-bolder mb-0">
+  <div class="card-body">
+    <h5 class="card-title">How to Print a Test Page from the CMD?</h5>
+    <p class="card-text font-weight-bolder blockquote mb-0">
+<p>To print a test page on the printer you have created, do the following:</p>
+  <code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnqctl.vbs” -e -p "HP5525"</code>
+
+
+  </p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+
+
+<div class="card bg-dark text-white font-weight-bolder mb-0">
+  <div class="card-body">
+    <h5 class="card-title">Manage Print Queues from the Command Prompt</h5>
+    <p class="card-text">
+<p>Using the prnjobs.vbs script, you can view print jobs in queues. To display all print jobs for all local printers, run the command:</p>
+<code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnjobs.vbs” –l</code></p>
+<p>To display jobs on a specific printer, you need to specify its name:</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnjobs.vbs” –l –p HP5525</code></p>
+<p>To clear the print queue on one printer, run the following command:</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnjobs.vbs” –x –p HP5525</code></p>
+<p>Or you can quickly clear all queues for all printers (this is much more convenient than manually cleaning the print queues):</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnjobs.vbs” –x</code></p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+
+
+
+
+<div class="card bg-dark text-white font-weight-bolder mb-0">
+  <div class="card-body">
+    <h5 class="card-title">Share a Network Printer Using the Command Line</h5>
+    <p class="card-text">
+<p>All new printers that you installed in Windows from the command prompt are local. You can share them with other users over the network from the Windows GUI (see the <a href="http://woshub.com/sharing-files-printers-without-homegroup-windows-10/#h2_3">article</a>). You can also share the printer from the command line. For example, you want to provide network access to your HP5525 printer by publishing it under the name HP5525_Shared. Use the command:</p>
+  <p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prncnfg.vbs” -t  -p  HP5525 -h "HP5525_Shared" +shared</code></p>
+<p>To disable printer sharing, run:</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prncnfg.vbs” -t -p "HP5525" -shared</code></p>
+<p>Similarly, you can publish a printer in Active Directory:</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prncnfg.vbs” -t  -p HP5525 +published</code></p>
+
+
+<p>To remove printer from the AD, use the &#8220;<strong>-published</strong>&#8221; argument.</p>
+
+
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+
+
+
+
+<div class="card bg-dark text-white font-weight-bolder mb-0">
+  <div class="card-body">
+    <h5 class="card-title">How to Add a Network Printer via the Command Line?</h5>
+    <p class="card-text">
+<p>To connect a shared network printer connected to another computer, use the
+command:</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -ac -p “\\rome-prnt01\hp2100”</code><p>
+
+
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+
+
+
+<div class="card bg-dark text-white font-weight-bolder mb-0">
+  <div class="card-body">
+    <h5 class="card-title">How to Remove a Printer and Its Driver from the Command Prompt?</h5>
+    <p class="card-text">
+<p>A complete list of printers in the system can be displayed as:</p>
+<p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -l</code></p>
+<p>A printer can be removed with the following command:</p>
+<code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -d -p "HP5525"</code><br />
+<p>The print driver is deleted as follows:</p>
+<code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prndrvr.vbs" -d -m "HP Universal Printing PCL 6" -e "Windows x64" -v 3</code></p>
+
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
