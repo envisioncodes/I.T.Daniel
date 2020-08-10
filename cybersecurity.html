@@ -11,7 +11,7 @@
     <title>I.T.Daniel</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="#"></a>
 
 
@@ -130,6 +130,40 @@
 
 
 
+
+  <div class="card bg-dark text-white">
+    <img src="https://cdn.pixabay.com/photo/2013/07/12/14/48/bash-148836_960_720.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Example of a code exploit</strong></h5>
+      <div class="list-group">
+
+
+
+        <a href="#" class="list-group-item list-group-item-action list-group-item-dark bg-dark"><p><code>import binascii</code></p>
+        <p><code>f = open('exploit.bin', 'wb')</code></p>
+        <p><code>f.write(b'\x0a\x0b\x0c' * 10)</code></p>
+        <p><code>f.close</code></p>
+        <p><code>f = open('exploit.bin', 'rb')</code></p>
+        <p><code>bytes = f.read()</code></p>
+        <p><code>print(binascii.b2a_uu(bytes))</code></p></a>
+
+  </div>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- <div class="card bg-dark text-white">
     <img src="https://cdn.pixabay.com/photo/2013/07/12/14/48/bash-148836_960_720.png" class="card-img-top" alt="...">
     <div class="card-body">
@@ -147,11 +181,6 @@
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div> -->
-
-
-
-
-
 
 
 

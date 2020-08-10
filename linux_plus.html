@@ -11,7 +11,7 @@
     <title>I.T.Daniel</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="#"></a>
 
 
@@ -261,6 +261,40 @@
 
 
 
+
+
+  <div class="card bg-dark text-white">
+    <img src="https://cdn.pixabay.com/photo/2013/07/12/14/48/bash-148836_960_720.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><strong>How to install and use ClamAv antivirus</strong></h5>
+      <div class="list-group">
+
+
+
+        <p><code>$ sudo apt-get install clamav</code></p>
+          <p>updating ClamAV virus signature database</p>
+        <p><code>$ sudo freshclam</code></p>
+        <p>Did you see an error that resembles the following?</p>
+        <p>ERROR: /var/log/clamav/freshclam.log is locked by another process
+ERROR: Problem with internal logger (UpdateLogFile = /var/log/clamav/freshclam.log).</p>
+        <p>The error indicates that ClamAV is currently running in the background. You need to stop the program before installing updates.
+Enter the following command:</p>
+        <p><code>$ sudo /etc/init.d/clamav-freshclam stop</code></p>
+        <p>now update virus database now</p>
+        <p><code>$ sudo freshclam</code></p>
+        <p>restart ClamAv using the following command:</p>
+        <p><code>$ sudo /etc/init.d/clamav-freshclam start</code></p>
+        <p>You can use various combinations to do whatever you want. For example,
+if you want ClamAV to scan and list only the infected files in your home
+ directory, the command would look like this:</p>
+        <p><code>$ clamscan -i -r ~/</code></p>
+        <p>Use the following command to remove the virus as it finds:</p>
+        <p><code>$ clamscan --remove=yes -i -r ~/</code></p></a>
+
+  </div>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
 
 
 
