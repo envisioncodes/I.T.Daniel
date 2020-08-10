@@ -44,7 +44,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="home.html">Home</a>
           <a class="dropdown-item" href="windowsinfo.html">Windows command line</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="python_tutorial.html">Python</a>
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
@@ -70,7 +70,7 @@
 
 
     <div class="card-body">
-      <h5 class="card-title p-3 text-white">These scripts are present in all Windows versions (starting from Vista and Windows Server 2008) and are located in the directory <strong>C:\Windows\System32\Printing_Admin_Scripts\en-US</strong>.</h5>
+      <h5 class="card-title p-3 text-white"><strong>These scripts are present in all Windows versions (starting from Vista and Windows Server 2008) and are located in the directory </strong><strong>C:\Windows\System32\Printing_Admin_Scripts\en-US</strong>.</h5>
       <p class="card-text p-3 text-white">
         <strong>Prncnfg.vbs</strong> – a script to display information about the printer settings;
         <strong>Prndrvr.vbs</strong> – printer driver management (install / uninstall printer drivers);
@@ -95,7 +95,7 @@
   <div class="card bg-dark text-white">
     <img src="https://cdn.pixabay.com/photo/2013/07/12/14/48/bash-148836_960_720.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">How to Install a Printer Driver from the Command Line?</h5>
+      <h5 class="card-title"><strong>How to Install a Printer Driver from the Command Line?</strong></h5>
       <p class="card-text p-3 font-weight-bolder blockquote mb-0"><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prndrvr.vbs" -a -m "HP Universal Printing PCL 6" -i "C:\drv\HP Universal Print Driver\hpcu160u.inf"</code></p>
       <p><strong>-a</strong> – add printer driver;</p>
 <p><strong>-m “HP Universal Printing PCL 6”</strong>– the name of the printer driver;</p>
@@ -119,7 +119,7 @@
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">How to Add a New Printer from the Command Prompt?</h5>
+      <h5 class="card-title"><strong>How to Add a New Printer from the Command Prompt?</strong></h5>
       <p class="card-text p-3 font-weight-bolder blockquote mb-0"><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -a -p "HP5520" -m "HP Universal Printing PCL 6" -r "lpt1:"</code></p>
 <p><strong>-a</strong> – a new local printer is installed;</p>
 <p><strong>-p “HP5520”</strong> – a display name of the printer;</p>
@@ -142,7 +142,7 @@
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">Managing Default Printer Using CMD</h5>
+      <h5 class="card-title"><strong>Managing Default Printer Using CMD</strong></h5>
       <p>From the command line, you can choose which printer to use for default printing. With the following command you can list all installed printers:</p>
   <p class="card-text p-3 font-weight-bolder blockquote mb-0"><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" –l</code></p>
 <p>Get the name of the default printer.</p>
@@ -159,7 +159,7 @@
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">How to Create a TCP/IP Port for a Network Printer?</h5>
+      <h5 class="card-title"><strong>How to Create a TCP/IP Port for a Network Printer?</strong></h5>
       <code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\Prnport.vbs" -a -r IP_192.168.1.22 -h 192.168.1.22 -o raw -n 9100</code>
       <p><br><strong>-r IP_192.168.1.22</strong> – a name of the network port;</p>
       <p><strong>-h 192.168.1.22</strong> – IP address of the device;</p>
@@ -177,7 +177,7 @@
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">How to Print a Test Page from the CMD?</h5>
+      <h5 class="card-title"><strong>How to Print a Test Page from the CMD?</strong></h5>
       <p>To print a test page on the printer you have created, do the following:</p>
         <code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnqctl.vbs” -e -p "HP5525"</code>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -188,7 +188,7 @@
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">Manage Print Queues from the Command Prompt</h5>
+      <h5 class="card-title"><strong>Manage Print Queues from the Command Prompt</strong></h5>
       <p>Using the prnjobs.vbs script, you can view print jobs in queues. To display all print jobs for all local printers, run the command:</p>
       <code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnjobs.vbs” –l</code>
       <p>To display jobs on a specific printer, you need to specify its name:</p>
@@ -199,14 +199,14 @@
       <p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnjobs.vbs” –x</code></p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
     </div>
   </div>
 
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">Share a Network Printer Using the Command Line</h5>
+      <h5 class="card-title"><strong>Share a Network Printer Using the Command Line</strong></h5>
       <p>All new printers that you installed in Windows from the command prompt are local. You can share them with other users over the network from the Windows GUI (see the <a href="http://woshub.com/sharing-files-printers-without-homegroup-windows-10/#h2_3">article</a>). You can also share the printer from the command line. For example, you want to provide network access to your HP5525 printer by publishing it under the name HP5525_Shared. Use the command:</p>
         <p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prncnfg.vbs” -t  -p  HP5525 -h "HP5525_Shared" +shared</code></p>
       <p>To disable printer sharing, run:</p>
@@ -218,7 +218,7 @@
       <p>To remove printer from the AD, use the &#8220;<strong>-published</strong>&#8221; argument.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
     </div>
   </div>
 
@@ -226,21 +226,21 @@
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">How to Add a Network Printer via the Command Line?</h5>
+      <h5 class="card-title"><strong>How to Add a Network Printer via the Command Line?<strong></h5>
       <p>To connect a shared network printer connected to another computer, use the
       command:</p>
       <p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -ac -p “\\rome-prnt01\hp2100”</code><p>
 
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  
     </div>
   </div>
 
 
   <div class="card bg-dark text-white">
     <div class="card-body">
-      <h5 class="card-title">How to Remove a Printer and Its Driver from the Command Prompt?</h5>
+      <h5 class="card-title"><strong>How to Remove a Printer and Its Driver from the Command Prompt?</strong></h5>
       <p>A complete list of printers in the system can be displayed as:</p>
       <p><code>cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -l</code></p>
       <p>A printer can be removed with the following command:</p>
@@ -250,7 +250,7 @@
 
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-    
+
     </div>
   </div>
 
